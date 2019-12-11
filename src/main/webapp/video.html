@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+<body>
+	<video id="controls" autoplay="autoplay" loop="loop" type="video/mp4"
+		heigth="100%" width="100%"> Your browser does not support the
+		video tag.
+	</video>
+	<script>
+		var videourl = decodeURI(window.location.search);
+		if (videourl.indexOf("&") > -1) {
+			videourl = videourl.substring(videourl.indexOf("=") + 1, videourl
+					.indexOf("&"));
+		} else {
+			videourl = videourl.substring(videourl.indexOf("=") + 1);
+		}
+		document.getElementById("controls").src = videourl;
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Error page</title>
+	<script src="../../fui/js/cssboot.js"></script>
+	<script>
+		SrcBoot.output(['./errorpage.css']);
+	</script> 
+</head>
+<body>
+	<div class="page-loading"></div>	
+	<div class="error-header">
+		<p class="error-title">I'm sorry! The system had a small problem, please contact your administrator......</p>
+		<a id="btn" class="mini-button error-btn" onclick="showError">Check the detailed information</a>
+	</div>
+	<div id="content" class="error-content hidden">
+		<i class="icon-close"></i>
+		<p id="error-text" class="error-text" >
+		</p>
+	</div>
+	
+ 
+ 	<script type="text/javascript">var miniLocal='en_US.js';</script>
+ 	<script src="../../fui/js/jsboot.js"></script>
+    <script type="text/javascript">
+	    var btn = mini.get('btn');
+	    var $content = $('#content'),
+	    	$text = $('#error-text');
+		
+		epoint.initPage('errorpageaction', '', function(data) {
+			$text.html(data.text);
+			Util.hidePageLoading();
+		});
+		
+		function showError() {
+			$content.removeClass('hidden');
+			btn.hide();
+		}
+
+		$content.on('click', '.icon-close', function(){
+			$content.addClass('hidden');
+			btn.show();
+		});
+		
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/*页面框架公共样式*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.content-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+.content {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    background-size: 1920px 1080px;
+    background-image: url(../images/bg.jpg);
+}
+/*头部*/
+.header {
+    height: 101px;
+    background: url(../images/header.png) no-repeat 0;
+}
+.header>span {
+    float: left;
+    margin: 22px 0 0 60px;
+    padding-left: 32px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3dd4ff;
+    background: url(../images/nav-icon.png) no-repeat 0 center;
+    cursor: pointer;
+}
+.header>.link {
+    float: left;
+    width: 212px;
+    height: 42px;
+    margin-left: 15px;
+    line-height: 42px;
+    transform: skew(35deg) rotate(1deg);
+    text-align: center;
+    background-color: #0B197D;
+    box-shadow: 0 0 25px #1a60ff inset; 
+    transition: all .3s;
+}
+.header>.link.act,
+.header>.link:hover {
+    color: #3DD4FF;
+    background-color: #003081;
+    box-shadow: 0 0 25px #3dd4ff inset;
+}
+.header>.link>span  {
+    display: block;
+    font-size: 26px;
+    font-family: '黑体';
+    transform: skew(-35deg);
+}
+.header .title {
+    float: left;
+    width: 580px;
+    text-align: center;
+    font-family: '黑体';
+    cursor: default;
+}
+.header>.link:nth-child(2) {
+    margin: 28px 0 0 58px;
+}
+.header>.link:nth-child(3) {
+    margin-top: 34px;
+}
+.header>.link:nth-child(5) {
+    transform: skew(-35deg) rotate(-1deg);
+    margin-top: 34px;
+    margin-left: 7px;
+}
+.header>.link:nth-child(6) {
+    transform: skew(-35deg) rotate(-1deg);
+    margin-top: 28px;
+}
+.header>.link:nth-child(5) span,
+.header>.link:nth-child(6) span {
+    transform: skew(35deg);
+}
+.header .title>h1 {
+    padding-top: 10px;
+    font-size: 40px;
+    color: #3dd4ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.header .title>p {
+    font-size: 26px;
+    color: #3dd4ff;
+    font-family: "Microsoft YaHei";
+}
+.pages-con {
+    position: absolute;
+    width: 1920px;
+    height: 992px;
+    margin-top: -14px;
+    overflow: hidden;
+}
+.pages-panel {
+    position: relative;
+    width: 5760px;
+    height: 104%;
+}
+.pages-item {
+    position: absolute;
+    width: 1920px;
+    height: 100%;
+}
+.btn {
+    position: absolute;
+    width: 8px;
+    height: 23px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-prev {
+    left: 10px;
+    background: url(../images/prev-icon.png) no-repeat 0;
+}
+.btn-next {
+    right: 10px;
+    background: url(../images/next-icon.png) no-repeat 0;
+}
+
+.pages-frame {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*服务导航弹窗*/
+.nav-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    transform: scale(0);
+}
+.nav-layer.show {
+    transform: scale(1);
+}
+.layer-con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1390px;
+    height: 530px;
+    margin: -265px 0 0 -695px;
+    padding: 0 38px;
+    background-color: #050c55;
+    box-shadow: 0 0 80px #0f83e6 inset;
+    border: 2px solid #0f83e6;
+    border-radius: 12px;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+.nav-layer.show .layer-con {
+    transform: scale(1);
+}
+.layer-con>h6 {
+    height: 76px;
+    line-height: 76px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3ccffa;
+    border-bottom: 1px solid #0f34a5;
+}
+.close {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 53px;
+    height: 53px;
+    background-position: 0;
+    background-image: url(../../../images/layer-close.png);
+    transition: all .5s;
+    cursor: pointer;
+}
+.close:hover {
+    background-position: 0;
+    transform: scale(1.2);
+}
+.nav-tab .hd {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.nav-tab .hd>li {
+    height: 68px;
+    padding: 0 28px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3ccffb;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+.nav-tab .hd>li a {
+    color: #3ccffb;
+    cursor: pointer;
+}
+.nav-tab .hd>li.active {
+    color: #00fd99;
+    border-color: #1284e7;
+    background-color: #071c6e;
+}
+.nav-tab .hd>li:hover {
+    color: #00fd99;
+}
+.nav-tab .hd>li a:hover {
+    color: #00fd99;
+}
+.nav-tab .bd {
+    height: 315px;
+    margin-top: -1px;
+    background-color: #071c6e;
+    border: 1px solid #1284e7;
+}
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 312px;
+}
+.nav-list > li {
+	height: 35px;
+	padding-left: 108px;
+	line-height: 35px;
+}
+.nav-list > li>a {
+	padding-left: 15px;
+	font-size: 16px;
+	color: #bbebff;
+	background: url(../images/nav-def1.png) no-repeat 0 center;
+}
+.nav-list > li>a:hover,
+.nav-list > li>a.act {
+	color: #00fd99;
+	background: url(../images/nav-act1.png) no-repeat 0 center;
+}
+
+.sub-module {
+	position: relative;
+	float: left;
+	width: 434px;
+	margin-top: 35px;
+}
+.sub-module::before {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	content: '';
+	height: 230px;
+	border-left: 1px solid #082d8c;
+}
+.sub-module>h6 {
+	margin-bottom: 15px;
+	font-size: 18px;
+	color: #bbebff;
+	text-align: center;
+}
+.sub-module>h6::before,
+.sub-module>h6::after {
+    content: '';
+    position: relative;
+    top: -5px;
+    right: 6px;
+	width: 100px;
+	border-bottom: 2px solid #1284e7;
+    display: inline-block;
+}
+.sub-module>h6::after {
+	right: auto;
+	left: 6px;
+}
+.sub-module .nav-list {
+	height: auto;
+}
+
+#warnLayer>.layer-con{
+	width:800px;
+	height:300px;
+	margin:-150px 0 0 -400px
+}
+#warnLayer>.layer-con>.nav-tab{
+	color:#3ccffb;
+	height:100%;
+	font-size:50px;
+	padding-top:60px;
+	text-align:center
+}
+
+.disnone{
+	display:none;
+}
+.disblock{
+	display:block;
+}

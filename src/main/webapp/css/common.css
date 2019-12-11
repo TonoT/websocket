@@ -1,0 +1,341 @@
+/* yui3 reset.css */
+html {
+    color: #000;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+caption,
+th {
+    text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+q:before,
+q:after {
+    content: ''
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%
+}
+
+legend {
+    color: #000
+}
+
+iframe {
+    display: block;
+}
+
+/* yui3 fonts */
+body {
+    font: 14px "Microsoft YaHei", arial, helvetica, clean, sans-serif;
+    color: #fff;
+}
+
+select,
+input,
+button,
+textarea {
+    font: 99% arial, helvetica, clean, sans-serif
+}
+
+table {
+    font-size: inherit;
+    font: 100%
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+    font-family: monospace;
+    *font-size: 108%;
+    line-height: 100%
+}
+
+a {
+    text-decoration: none;
+}
+
+/* utilities */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.l {
+    float: left !important;
+}
+
+.r {
+    float: right !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.frame {
+    background: url("../images/bg.jpg") no-repeat left bottom;
+    height: 1200px;
+    width: 1920px;
+}
+
+.framepage {
+    height: 100%;
+}
+
+.datetime {
+    text-align: right;
+    position: absolute;
+    line-height: 60px;
+    right: 40px;
+    top: 30px;
+}
+
+.datetime > .date {
+    font-size: 28px;
+}
+
+.datetime > .time {
+    font-size: 72px;
+}
+
+.leftnav {
+    width: 300px;
+    background: rgba(0,0,0,0.3);
+    height: 1200px;
+    position: relative;
+    float: left;
+}
+
+.leftnav > .logowrap {
+    text-align: center;
+    height: 182px;
+    line-height: 182px;
+}
+
+.logowrap > img {
+    vertical-align: middle;
+}
+
+.navwarp {
+    position: absolute;
+    left: 0;
+    top: 182px;
+    bottom: 0;
+    right: 0;
+    box-shadow: 2px 0px 12px 0px rgba(0,0,0,0.4)
+}
+
+.nav {
+    line-height: 180px;
+}
+
+.nav > li {
+    height: 180px;
+}
+
+.nav > li a {
+    font-size: 36px;
+    color: #aab5db;
+    display: block;
+    padding-left: 106px;
+    background-repeat: no-repeat;
+    background-position: 30px center;
+}
+
+.nav > li:hover,
+.nav > li.active {
+    background: url("../images/navactivebg.png") right center no-repeat;
+}
+
+.nav > li:hover a,
+.nav > li.active a {
+    background-color: rgba(88,109,183,.5);
+}
+
+
+
+.nav > li.publicresource a {
+    background-image: url(../images/publicresource-s.png);
+}
+
+.nav > li.nav02 a {
+    background-image: url(../images/nav02-s.png);
+}
+
+.nav > li.welcomeword a {
+    background-image: url(../images/welcomeword-s.png);
+}
+
+.nav > li.welcomepicture a {
+    background-image: url(../images/welcomepicture-s.png);
+}
+
+.nav > li.welcomevideo a {
+    background-image: url(../images/welcomevideo-s.png);
+}
+
+.nav > li.publicresource:hover a,
+.nav > li.publicresource.active a {
+    background-image: url(../images/publicresource-s-active.png);
+}
+
+.nav > li.nav02:hover a,
+.nav > li.nav02.active a {
+    background-image: url(../images/nav02-s-active.png);
+}
+
+.nav > li.welcomeword:hover a,
+.nav > li.welcomeword.active a {
+    background-image: url(../images/welcomeword-s-active.png);
+}
+
+.nav > li.welcomepicture:hover a,
+.nav > li.welcomepicture.active a {
+    background-image: url(../images/welcomepicture-s-active.png);
+}
+
+.nav > li.welcomevideo:hover a,
+.nav > li.welcomevideo.active a {
+    background-image: url(../images/welcomevideo-s-active.png);
+}
+
+.topbar {
+    position: relative;
+    height: 182px;
+}
+
+.topbar > .btnreturn {
+    width: 220px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    background: rgba(133,175,243,.3);
+    float: left;
+    border-radius: 5px;
+    margin: 40px 0 0 90px;
+}
+
+.currview-title {
+    background: url("../images/loadingicon.png") no-repeat left center;
+    width: 560px;
+    font-size: 48px;
+    margin: 200px auto 0 auto;
+    padding-left: 80px;
+    font-weight: bold;
+}
+
+.subpage {
+    margin-left: 300px;
+    height: 1200px;
+}

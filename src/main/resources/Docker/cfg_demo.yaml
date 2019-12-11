@@ -1,0 +1,12 @@
+servertype: tomcat
+virtualname: AccessControl
+configlist:   
+- filepath: WEB-INF/classes/ztb.properties
+  params:
+    RabbitMQIP: 192.168.108.48
+    RabbitMQPort: 5672
+    RabbitMQUserName: epoint
+    RabbitMQPassword: epoint
+    
+    
+    

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<img id="imageId" src="" alt="" heigth="100%" width="100%" />
+	<script>
+		var pictureurl = decodeURI(window.location.search);
+		if (pictureurl.indexOf("&") > -1) {
+			pictureurl = pictureurl.substring(pictureurl.indexOf("=") + 1,
+					pictureurl.indexOf("&"));
+		} else {
+			pictureurl = pictureurl.substring(pictureurl.indexOf("=") + 1);
+		}
+		document.getElementById("imageId").src = pictureurl;
+	</script>
+</body>
+</html>

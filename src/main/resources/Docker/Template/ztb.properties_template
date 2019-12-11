@@ -1,0 +1,26 @@
+#消息服务器RabbitMQ配置   port不允许写15672
+BigData.MQType=RabbitMQ
+BigData.host={{ .Env.RabbitMQIP }}
+BigData.port={{ .Env.RabbitMQPort }}
+BigData.userName={{ .Env.RabbitMQUserName }}
+BigData.passWord={{ .Env.RabbitMQPassword }}
+BigData.vhName=/
+BigData.queueName=EpointBid_BigDataQueue
+BigData.exchangeName=EpointBid_BigDataExchange.ack.direct
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
